@@ -1,0 +1,85 @@
+{
+	"name": "project-research-docs",
+	"version": "1.0.0",
+	"private": true,
+	"description": "docs of projects of research",
+	"keywords": [
+		"documentation",
+		"projects",
+		"vuepress"
+	],
+	"homepage": "https://github.com/vuejs/vuepress#readme",
+	"bugs": {
+		"url": "https://github.com/vuejs/vuepress/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/vuejs/vuepress.git"
+	},
+	"license": "MIT",
+	"author": "",
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-customizable"
+		}
+	},
+	"scripts": {
+		"prepare": "husky install",
+		"docs:dev": "vuepress dev docs",
+		"docs:build": "vuepress build docs",
+		"lint-md": "yarn lint-md:style && yarn lint-md:wording",
+		"lint-md:style": "remark --quiet --frail .",
+		"lint-md:wording": "textlint docs/**/*.md --fix",
+		"formatter": "prettier --write .",
+		"lint-ts": "yarn eslint --fix --ext .js,.ts,.vue",
+		"lint-style": "yarn stylelint docs/.vuepress/**/*.{vue,styl} --fix",
+		"show-help": "vuepress --help",
+		"commit": "git-cz"
+	},
+	"dependencies": {
+		"vue-toasted": "^1.1.28",
+		"vuepress": "^1.9.7"
+	},
+	"devDependencies": {
+		"@commitlint/config-conventional": "^17.0.3",
+		"@textlint-rule/textlint-rule-no-unmatched-pair": "^1.0.8",
+		"@typescript-eslint/eslint-plugin": "^5.32.0",
+		"@typescript-eslint/parser": "^5.32.0",
+		"@vuepress/plugin-active-header-links": "^1.9.7",
+		"@vuepress/plugin-back-to-top": "^1.9.7",
+		"@vuepress/plugin-medium-zoom": "^1.9.7",
+		"@vuepress/theme-vue": "^1.9.7",
+		"commitizen": "^4.2.5",
+		"commitlint": "^17.0.3",
+		"commitlint-config-cz": "^0.13.3",
+		"cz-customizable": "^6.9.1",
+		"eslint": "^7.32.0 || ^8.2.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-import-resolver-typescript": "^3.4.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-vue": "^9.3.0",
+		"husky": "^8.0.1",
+		"lint-staged": "^13.0.3",
+		"prettier": "^2.7.1",
+		"remark-cli": "^11.0.0",
+		"remark-lint": "^9.1.1",
+		"remark-preset-lint-consistent": "^5.1.1",
+		"remark-preset-lint-recommended": "^6.1.2",
+		"stylelint": "^14.9.1",
+		"stylelint-config-rational-order": "^0.1.2",
+		"stylelint-config-standard": "^26.0.0",
+		"stylelint-stylus": "^0.16.1",
+		"textlint": "^12.2.1",
+		"textlint-filter-rule-comments": "^1.2.2",
+		"textlint-rule-apostrophe": "^2.0.0",
+		"textlint-rule-common-misspellings": "^1.0.1",
+		"textlint-rule-diacritics": "^1.0.0",
+		"textlint-rule-en-capitalization": "^2.0.3",
+		"textlint-rule-stop-words": "^3.0.1",
+		"textlint-rule-terminology": "^3.0.3",
+		"textlint-rule-write-good": "^2.0.0",
+		"typescript": "^4.7.4",
+		"vuepress-plugin-flowchart": "^1.5.0"
+	}
+}

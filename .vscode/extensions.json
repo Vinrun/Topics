@@ -1,0 +1,12 @@
+{
+	"recommendations": [
+		"editorconfig.editorconfig",
+		"dbaeumer.vscode-eslint",
+		"stylelint.vscode-stylelint",
+		"octref.vetur",
+		"esbenp.prettier-vscode",
+		"thisismanta.stylus-supremacy",
+		"sysoev.language-stylus",
+		"rvest.vs-code-prettier-eslint"
+	]
+}
