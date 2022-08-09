@@ -35,7 +35,7 @@ jobs:
         run: yarn docs:build
 
       - name: Deploy to gh-pages
-        run: npx gh-pages -d ../docs/.vuepress/dist
+        run: npx gh-pages -d dist
 
       - name: Remove gh-pages
         run: yarn remove gh-pages
