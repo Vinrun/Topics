@@ -1,0 +1,39 @@
+name: Pull request workflow
+
+on: pull_request
+
+jobs:
+  PR:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          check-latest: true
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install dependencies
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
+        run: yarn
+
+      - name: Run formatter
+        run: yarn formatter
+
+      - name: Check typescript linter
+        run: yarn lint-ts
+
+      - name: Check stylus linter
+        run: yarn lint-style
+
+      - name: Check markdown linter
+        run: yarn lint-md

@@ -1,0 +1,13 @@
+# Ignore artifacts:
+/node_modules
+/dist
+
+# not Ignore artifacts:
+!.vuepress
+!.eslintrc.js
+!.commitlintrc.js
+!.stylelintrc
+
+# Ignore files:
+/.remarkrc
+/.remarkignore

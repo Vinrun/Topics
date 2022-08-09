@@ -1,0 +1,9 @@
+# Ignore artifacts:
+node_modules
+dist
+
+# Ignore files:
+*.lock
+*.md
+.remarkrc
+.remarkignore
