@@ -8,14 +8,13 @@ jobs:
   CD:
     runs-on: ubuntu-latest
     steps:
-
       - name: Checkout repository
         uses: actions/checkout@v2
 
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "16.x"
+          node-version: '16.x'
           check-latest: true
 
       - name: Cache
@@ -36,7 +35,7 @@ jobs:
         run: yarn build
 
       - name: Deploy to gh-pages
-        run : npx gh-pages -d ../docs/.vuepress/dist
+        run: npx gh-pages -d ../docs/.vuepress/dist
 
       - name: Remove gh-pages
         run: yarn remove gh-pages
@@ -58,8 +57,3 @@ jobs:
       #     REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
       #     # REMOTE_USER为登录机器时用到账号名
       #     REMOTE_USER: ${{secrets.REMOTE_USER}}
-
-
-
-
-

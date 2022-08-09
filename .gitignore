@@ -9,6 +9,3 @@ dist
 
 # Editors
 .idea
-
-# Docs dist directory
-/vuepress
