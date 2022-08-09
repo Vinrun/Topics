@@ -32,7 +32,7 @@ jobs:
         run: yarn add gh-pages -D
 
       - name: Build vuepress
-        run: yarn build
+        run: yarn docs:build
 
       - name: Deploy to gh-pages
         run: npx gh-pages -d ../docs/.vuepress/dist
