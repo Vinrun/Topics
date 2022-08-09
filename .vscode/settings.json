@@ -1,0 +1,52 @@
+{
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true,
+		"source.fixAll.stylelint": true
+	},
+	"eslint.format.enable": true,
+	"eslint.alwaysShowStatus": true,
+	"eslint.run": "onSave",
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+		"vue"
+	],
+	"stylelint.validate": ["stylus", "css", "vue"],
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/.DS_Store": true,
+		"**/.git": true,
+		"**/.gitignore": true,
+		"**/.idea": true,
+		"**/.svn": true,
+		"**/.vscode": true,
+		"**/dist": true
+	},
+	"prettier.useEditorConfig": true,
+	"vetur.format.defaultFormatterOptions": {
+		"prettier": {
+			"eslintIntegration": true
+		}
+	},
+	"vetur.format.defaultFormatter.stylus": "stylus-supremacy",
+	"vetur.format.defaultFormatter.js": "prettier-eslint",
+	"vetur.format.defaultFormatter.ts": "prettier",
+	"vetur.validation.template": false,
+	"[styl]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[vue]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
+}
