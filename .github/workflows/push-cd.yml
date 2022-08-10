@@ -31,8 +31,12 @@ jobs:
       - name: Build vuepress
         run: yarn docs:build
 
-      - name: Deploy to gh-pages
-        run: yarn gh-pages
+      - name: Deploy with gh-pages
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          yarn deploy:gh-pages -- -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # - name: Upload to Deploy Server
       #   uses: easingthemes/ssh-deploy@v2.0.7
