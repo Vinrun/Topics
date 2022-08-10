@@ -8,16 +8,16 @@
 		"projects",
 		"vuepress"
 	],
-	"homepage": "https://github.com/vuejs/vuepress#readme",
+	"homepage": "https://github.com/Vinrun/Topics#readme",
 	"bugs": {
-		"url": "https://github.com/vuejs/vuepress/issues"
+		"url": "https://github.com/Vinrun/Topics/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/vuejs/vuepress.git"
+		"url": "git+https://github.com/Vinrun/Topics.git"
 	},
 	"license": "MIT",
-	"author": "",
+	"author": "Jaqea",
 	"config": {
 		"commitizen": {
 			"path": "./node_modules/cz-customizable"
@@ -34,7 +34,8 @@
 		"lint-ts": "yarn eslint --fix --ext .js,.ts,.vue",
 		"lint-style": "yarn stylelint docs/.vuepress/**/*.{vue,styl} --fix",
 		"show-help": "vuepress --help",
-		"commit": "git-cz"
+		"commit": "git-cz",
+		"gh-pages": "node scripts/gh-pages"
 	},
 	"dependencies": {
 		"vue-toasted": "^1.1.28",
@@ -59,6 +60,7 @@
 		"eslint-import-resolver-typescript": "^3.4.0",
 		"eslint-plugin-prettier": "^4.2.1",
 		"eslint-plugin-vue": "^9.3.0",
+		"gh-pages": "^4.0.0",
 		"husky": "^8.0.1",
 		"lint-staged": "^13.0.3",
 		"prettier": "^2.7.1",
