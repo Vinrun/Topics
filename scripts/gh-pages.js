@@ -1,4 +1,4 @@
-import { publish } from 'gh-pages';
+const ghpages = require('gh-pages');
 
 const DIR = 'docs/.vuepress/dist';
 
@@ -11,4 +11,4 @@ const GITCONFIG = {
 	},
 };
 
-publish(DIR, GITCONFIG);
+ghpages.publish(DIR, GITCONFIG);
