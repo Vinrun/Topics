@@ -5,6 +5,7 @@ export default defineConfig((ctx) => ({
 	theme: '@vuepress/vue',
 	// dest: '../../dist',
 	host: '0.0.0.0',
+	base: '/Topics/',
 	port: 8080,
 	markdown: {
 		lineNumbers: true,
