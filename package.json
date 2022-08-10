@@ -35,7 +35,7 @@
 		"lint-style": "yarn stylelint docs/.vuepress/**/*.{vue,styl} --fix",
 		"show-help": "vuepress --help",
 		"commit": "git-cz",
-		"gh-pages": "node scripts/gh-pages"
+		"deploy:gh-pages": "gh-pages -d docs/.vuepress/dist"
 	},
 	"dependencies": {
 		"vue-toasted": "^1.1.28",
