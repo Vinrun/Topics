@@ -1,6 +1,7 @@
 # Ignore artifacts:
 /node_modules
 /dist
+/scripts
 
 # not Ignore artifacts:
 !.vuepress
